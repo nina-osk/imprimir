@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Impresora termica",
+    "version": "0.1",
+    "description": "Permitir imprimir con impresora termica",
+    "author": "Oscarina Hernandez",
+    "version_name": "0.1 Alpha",
+  
+    "icons": { 
+      "16": "favicon-16x16.png"
+ 
+    },
+  
+    "page_action":{
+      "default_icon": "favicon-16x16.png",
+      "default_popup": "popup.html"
+    },
+  
+    "permissions": ["tabs", "storage"],
+  
+    "background": {
+      "scripts": ["poppput.js"],
+      "persistent": false
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["http://https://alacarta.online"],
+        "js": ["js/content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+  
+    "options_page": "options.html"
+  }
