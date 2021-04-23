@@ -1,5 +1,5 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "Impresora termica",
     "version": "0.1",
     "description": "Permitir imprimir con impresora termica",
@@ -11,17 +11,11 @@
 
     },
 
-    "content_scripts": [
-      {
-        "matches": ["http://*alacarta.com*"],
-        "css": ["myStyles.css"],
-        "js": ["printer.js", "index.js"]
-      }
-    ],
+  
   
     "page_action":{
       "default_icon": "favicon-16x16.png",
-      "default_popup": "poppup.html"
+      "default_popup": "index.html"
     },
   
     "permissions": ["tabs", "storage"],
